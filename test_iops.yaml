@@ -1,7 +1,5 @@
 - name: Hello World Sample
   hosts: sang-test-1
-  remote_user: ubuntu
-  sudo: yes
   tasks:
     - name: Hello Message
       debug:
@@ -12,4 +10,4 @@
         dest: /home/ubuntu/bench_vm.sh
         mode: '0777'
     - name: Execute the script
-      command: sh /home/ubuntu/bench_vm.sh
+      command: sudo /home/ubuntu/bench_vm.sh
