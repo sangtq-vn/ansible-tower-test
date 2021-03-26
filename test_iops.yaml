@@ -10,4 +10,4 @@
         dest: /home/ubuntu/bench_vm.sh
         mode: '0777'
     - name: Run a script with arguments 
-       ansible.builtin.script: /home/ubuntu/bench_vm.sh
+      ansible.builtin.script: /home/ubuntu/bench_vm.sh
