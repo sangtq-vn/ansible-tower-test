@@ -1,5 +1,5 @@
 - name: Hello World Sample
-  hosts: sang-test-1
+  hosts: all
   tasks:
     - name: Hello Message
       debug:
