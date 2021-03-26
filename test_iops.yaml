@@ -7,7 +7,7 @@
     - name: Download benchmark vm file
       get_url:
         url: https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/bench_vm.sh
-        dest: ~/bench_vm.sh
+        dest: /home/ubuntu/bench_vm.sh
         mode: '0777'
     - name: Run a script with arguments 
-      ansible.builtin.script: ~/bench_vm.sh
+       ansible.builtin.script: /home/ubuntu/bench_vm.sh
