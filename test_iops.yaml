@@ -1,0 +1,11 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
+    - name: Download benchmark vm file
+      get_url:
+        url: https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/bench_vm.sh
+        dest: ~/bench_vm.sh
+        mode: '0777'
