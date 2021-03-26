@@ -11,4 +11,4 @@
         mode: '0777'
     - name: Run a script with arguments 
       ansible.builtin.script:
-      cmd: ~/bench_vm.sh
+        cmd: ~/bench_vm.sh
