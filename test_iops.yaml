@@ -1,5 +1,7 @@
 - name: Hello World Sample
   hosts: sang-test-1
+  remote_user: ubuntu
+  sudo: yes
   tasks:
     - name: Hello Message
       debug:
@@ -9,5 +11,5 @@
         url: https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/bench_vm.sh
         dest: /home/ubuntu/bench_vm.sh
         mode: '0777'
-    - name: Run a script with arguments 
-      ansible.builtin.script: /home/ubuntu/bench_vm.sh
+    - name: Execute the script
+      command: sh /home/ubuntu/bench_vm.sh
