@@ -10,4 +10,4 @@
         dest: /mnt/bench_vm.sh
         mode: '0777'      
     - name: Execute the script
-      command: cd /mnt && sh /mnt/bench_vm.sh
+      command: 'cd /mnt && sh /mnt/bench_vm.sh'
