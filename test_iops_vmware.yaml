@@ -8,6 +8,8 @@
       get_url:
         url: https://raw.githubusercontent.com/nhanhoadocs/scripts/master/Utilities/bench_vm.sh
         dest: /mnt/bench_vm.sh
-        mode: '0777'      
+        mode: '0777'
     - name: Execute the script
-      command: 'cd /mnt && sh /mnt/bench_vm.sh'
+      command: cd /mnt        
+    - name: Execute the script
+      command: sudo /mnt/bench_vm.sh
