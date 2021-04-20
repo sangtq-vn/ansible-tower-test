@@ -6,10 +6,10 @@
         msg: "Hello World!"
     - name: Download benchmark vm file
       get_url:
-        url: " 'https://raw.githubusercontent.com/sangtq-vn/ansible-tower-test/main/' + {{ test_file }}" 
-        dest: " '/home/ubuntu/' + {{ test_file }}" 
+        url: "https://raw.githubusercontent.com/sangtq-vn/ansible-tower-test/main/{{ test_file }}" 
+        dest: "/home/ubuntu/{{ test_file }}" 
         mode: '0777'      
     - name: Execute the script
-      command: sudo " '/home/ubuntu/' + {{ test_file }}" 
+      command: "sudo /home/ubuntu/{{ test_file }}"  
       args:
         chdir: /home/ubuntu
