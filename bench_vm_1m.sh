@@ -81,7 +81,7 @@ fio_test() {
 	if [ -e '/usr/bin/fio' ]; then
 		echo "Fio Test"
 		local tmp=$(mktemp)
-		fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=fio_test --filename=fio_test --bs=4m --numjobs=1 --iodepth=64 --size=256M --readwrite=randrw --rwmixread=75 --runtime=300 --time_based --output="$tmp"
+		fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=fio_test --filename=fio_test --bs=1024k --numjobs=1 --iodepth=64 --size=256M --readwrite=randrw --rwmixread=75 --runtime=300 --time_based --output="$tmp"
 		
 		if [ $(fio -v | cut -d '.' -f 1) == "fio-2" ]; then
 			local iops_read=`grep "iops=" "$tmp" | grep read | awk -F[=,]+ '{print $6}'`
