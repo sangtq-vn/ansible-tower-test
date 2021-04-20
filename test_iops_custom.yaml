@@ -1,0 +1,15 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
+    - name: Download benchmark vm file
+      get_url:
+        url: " 'https://raw.githubusercontent.com/sangtq-vn/ansible-tower-test/main/' + {{ test_file }}" 
+        dest: " '/home/ubuntu/' + {{ test_file }}" 
+        mode: '0777'      
+    - name: Execute the script
+      command: sudo " '/home/ubuntu/' + {{ test_file }}" 
+      args:
+        chdir: /home/ubuntu
