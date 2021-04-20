@@ -14,6 +14,7 @@ DATE=`date '+%Y-%m-%d %H:%M:%S'`
 [[ $EUID -ne 0 ]] && echo -e "${RED}Error:${PLAIN} This script must be run as root!" && exit 1
 
 # install wget, fio and virt-what ioping nc fio 
+apt-get update
 if [ ! -e '/usr/bin/fio' ]; then 
 yum install -y fio || apt-get install -y fio 
 fi 
